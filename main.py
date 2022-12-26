@@ -2,39 +2,35 @@ print("****Bienvenido a su calculadora virtual*****")
 numero1 = int(input("Ingrese un número "))
 print("*" * 6, "Escoja el tipo de operación",
 "*" * 6)
-print("""1. Suma
-2. Resta
-3. División
-4. Multiplicación
-5. Salir""")
-operacion = int(input("Ingresa tu opción "))
-while operacion >= 1 and operacion <= 5:
+counter = 0
+new_number = 0 + numero1
+while counter <= 10:
+  operacion = int(input("""Ingresa tu opción:
+  1. Suma
+  2. Resta
+  3. Multiplicación
+  4. Division
+  5. Salir
+  Ingresa aqui => """))  
   if operacion == 1:
-    numero2 = int(input("Ingrese otro numero "))
-    resultado = numero1 + numero2 
-    print(resultado)
-    operacion = int(input('''Ingrese otra operación
-    1. Suma
-    2. Resta
-    3. División
-    4. Multiplicación
-    5. Salir
-    '''))
-    resultado = resultado + numero2
-    print(resultado)
+    new_number = new_number + int(input("Ingrese otro numero "))
+    print("El resultado de su operación es ", new_number)    
+    counter += 1
   elif operacion == 2:
-    numero2 = int(input("Ingrese otro numero "))
-    resultado = numero1 - numero2 
-    print(resultado)
+    new_number = new_number - int(input("Ingrese otro numero "))
+    print("El resultado de su operación es ", new_number)
+    counter += 1
   elif operacion == 3:
-    numero2 = int(input("Ingrese otro numero "))
-    resultado = numero1 / numero2 
-    print(resultado)
+    new_number = new_number * int(input("Ingrese otro numero "))
+    print("El resultado de su operación es ", new_number)
+    counter += 1
   elif operacion == 4:
-    numero2 = int(input("Ingrese otro numero "))
-    resultado = numero1 * numero2 
-    print(resultado)
-  
-    
+    new_number = new_number / int(input("Ingrese otro numero "))
+    print("El resultado de su operación es ", new_number)
+    counter += 1
+  elif operacion == 5:
+    break
+  else:
+    print("Seleccione una opción correcte, recuerde que debe ingresar el número de su operación")
   
   
