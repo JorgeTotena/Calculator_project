@@ -51,6 +51,6 @@ while counter <= 10:
   elif operacion == 5:
     break
   else:
-    print("Seleccione una opción correcte, recuerde que debe ingresar el número de su operación")
+    print("Seleccione una opción correcta, recuerde que debe ingresar el número de su operación")
   
   
