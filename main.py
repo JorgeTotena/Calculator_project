@@ -14,19 +14,39 @@ while counter <= 10:
   Ingresa aqui => """))  
   if operacion == 1:
     new_number = new_number + int(input("Ingrese otro numero "))
-    print("El resultado de su operación es ", new_number)    
+    print("El resultado de su operación es ", new_number)
+    validation = input("Quieres continuar? (y/n) ")
+    if validation == "y":
+      continue
+    else:
+      break    
     counter += 1
   elif operacion == 2:
     new_number = new_number - int(input("Ingrese otro numero "))
     print("El resultado de su operación es ", new_number)
+    validation = input("Quieres continuar? (y/n) ")
+    if validation == "y":
+        continue
+    else:
+      break  
     counter += 1
   elif operacion == 3:
     new_number = new_number * int(input("Ingrese otro numero "))
     print("El resultado de su operación es ", new_number)
+    validation = input("Quieres continuar? (y/n)")
+    if validation == "y":
+        continue
+    else:
+      break 
     counter += 1
   elif operacion == 4:
     new_number = new_number / int(input("Ingrese otro numero "))
     print("El resultado de su operación es ", new_number)
+    validation = input("Quieres continuar? (y/n) ")
+    if validation == "y":
+        continue
+    else:
+      break 
     counter += 1
   elif operacion == 5:
     break
