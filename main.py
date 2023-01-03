@@ -1,3 +1,4 @@
+import math
 def number():
   print("****Bienvenido a su calculadora virtual*****")
   numero1 = int(input("Ingrese un número "))
@@ -17,7 +18,9 @@ def operation():
     2. Resta
     3. Multiplicación
     4. Division
-    5. Salir
+    5. Potencia
+    6. Raiz cuadrada
+    7. Salir
     Ingresa aqui => """))  
     if operacion == 1:
       new_number = new_number + int(input("Ingrese otro numero "))
@@ -47,15 +50,33 @@ def operation():
         break 
       counter += 1
     elif operacion == 4:
-      new_number = new_number / int(input("Ingrese otro numero "))
+      new_number = new_number // int(input("Ingrese otro numero "))
       print("El resultado de su operación es ", new_number)
       validation = input("Quieres continuar? (y/n) ")
       if validation == "y":
           continue
       else:
-        break 
-      counter += 1
+       break   
     elif operacion == 5:
+      new_number = new_number ** int(input("Ingrese otro numero "))
+      print("El resultado de su operación es ", new_number)
+      validation = input("Quieres continuar? (y/n) ")
+      if validation == "y":
+       continue
+      else:
+       break 
+      counter += 1
+    elif operacion == 6:
+      new_number = math.sqrt(new_number)
+      print("El resultado de su operación es ", new_number)
+      validation = input("Quieres continuar? (y/n) ")
+      if validation == "y":
+       continue
+      else:
+       break 
+      counter += 1
+      
+    elif operacion == 7:
       break
     else:
       print("Seleccione una opción correcta, recuerde que debe ingresar el número de su operación")
